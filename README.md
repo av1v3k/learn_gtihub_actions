@@ -64,5 +64,30 @@ Ref: https://github.com/actions/setup-node - (search in google - "github actions
 - name: Install dependent packages
   run: npm ci
 
+# (continued) - more than 1 job
+
+jobs: => 2nd job
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        uses: node build
+
+# (continued) - parallel build(default) vs sequential
+
+- for executing job one after the other, "needs" is the key required to be added.
+
+example:
+
+jobs: =>
+  test: => 1st job name
+    ....
+    ....
+  deploy: => 2nd job name
+    needs: test => requires the 'test' job to be success and runs sequentially.
+    runs-on: ubuntu-latest
+
+
+
 
       
