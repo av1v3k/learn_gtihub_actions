@@ -3,6 +3,7 @@ to learn github actions
 
 # Key Components:
 Workflows, Jobs, Steps
+Workflow -> Jobs -> Steps
 
 Workflow: Can be many workflows which belongs to a repo. Triggered upon events. Ex: new commit to a Branch.
 Jobs: It can have multiple jobs withing the workflow. A Runner execution environment. Can be conditional.
@@ -33,3 +34,19 @@ jobs:
 Reference: 
 https://docs.github.com/en/actions/reference/events-that-trigger-workflows - (list of actions which can be triggered.)
 https://docs.github.com/en/actions/how-tos/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners - (list of runners)
+
+
+Actions with push: - pull code from the repo
+
+name: Test Project => name of the workflow
+on: push => event of the workflow
+jobs: => 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+
+
+Ref: https://github.com/marketplace/actions/checkout - (actions workflow)
+      
