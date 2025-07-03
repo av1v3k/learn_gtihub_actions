@@ -49,4 +49,15 @@ jobs: =>
 
 
 Ref: https://github.com/marketplace/actions/checkout - (actions workflow)
+
+# (continued) Configuring NodeJS Step
+
+name: Install nodejs
+uses: actions/setup-node@v4
+with:
+  node-version: 18
+
+Ref: https://github.com/actions/setup-node - (search in google - "github actions install nodejs")
+
+
       
