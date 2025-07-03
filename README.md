@@ -12,7 +12,7 @@ Steps: Actual actions within the Jobs which is executed.
 Removed all Actions steps and disabled the git actions.
 
 
-First Git Actions: 
+# First Git Actions: 
 
 name: <name-of-workflow> => name of the workflow
 "on: workflow_dispatch" => To manually triggering the workflow
@@ -36,7 +36,7 @@ https://docs.github.com/en/actions/reference/events-that-trigger-workflows - (li
 https://docs.github.com/en/actions/how-tos/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners - (list of runners)
 
 
-Actions with push: - pull code from the repo
+# Actions with push: - pull code from the repo
 
 name: Test Project => name of the workflow
 on: push => event of the workflow
