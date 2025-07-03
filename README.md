@@ -59,5 +59,10 @@ with:
 
 Ref: https://github.com/actions/setup-node - (search in google - "github actions install nodejs")
 
+# (continued) - Install dependencies
+
+- name: Install dependent packages
+  run: npm ci
+
 
       
