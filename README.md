@@ -22,7 +22,12 @@ jobs:
   runs-on: ubunntu-latest => runner name
   steps:
     - name: First Step => name of the step
-    - run: echo "Hello" => command to trigger
+      run: echo "Hello" => command to trigger
+    - name: Second Step
+      run: | => For multi-line command steps to execute.
+        echo "first command"
+        echo "2nd command"
+        echo "3rd command"
 
 
 Reference: 
